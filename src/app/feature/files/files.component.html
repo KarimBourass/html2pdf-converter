@@ -1,0 +1,29 @@
+<div>
+  <nz-page-header nzTitle="All files"></nz-page-header>
+
+  <nz-table #basicTable [nzData]="listOfData">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.name }}</td>
+        <td>
+          <nz-tag nzColor="blue">Pending</nz-tag>
+        </td>
+        <td>
+          <a [routerLink]="['/files', data.file_id]">
+            <span nz-icon nzType="step-forward" nzTheme="outline"></span>
+            preview
+          </a>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>convert</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>

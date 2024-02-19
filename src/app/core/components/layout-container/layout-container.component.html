@@ -1,0 +1,24 @@
+<nz-layout class="flex">
+  <nz-sider
+    class="relative z-10 min-h-screen shadow-md"
+    nzCollapsible
+    nzWidth="256px"
+    nzBreakpoint="md"
+    nzTheme="light"
+    [(nzCollapsed)]="isCollapsed"
+    [nzTrigger]="null"
+  >
+    <app-side-nav [isCollapsed]="isCollapsed" [appName]="appName" />
+  </nz-sider>
+  <nz-layout>
+    <app-header
+      [isCollapsed]="isCollapsed"
+      (collapse)="isCollapsed = !isCollapsed"
+    />
+    <nz-content class="m-5">
+      <div class="h-full">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

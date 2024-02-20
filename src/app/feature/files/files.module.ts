@@ -11,6 +11,7 @@ import { NzCodeEditorModule } from 'ng-zorro-antd/code-editor';
 import { FormsModule } from '@angular/forms';
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 const routes: Routes = [
   {
@@ -36,6 +37,7 @@ const routes: Routes = [
     NzButtonModule,
     NzCodeEditorModule,
     MonacoEditorModule,
+    PdfViewerModule,
   ],
 })
 export class FilesModule {}

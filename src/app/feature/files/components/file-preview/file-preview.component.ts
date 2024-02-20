@@ -14,6 +14,7 @@ export class FilePreviewComponent {
   code: string = ``;
   htmlContent!: SafeHtml;
   file: any;
+  pdfSrc = './assets/files/final.pdf';
 
   constructor(
     public sanitizer: DomSanitizer,

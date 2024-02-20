@@ -10,6 +10,7 @@ import { FilePreviewComponent } from './components/file-preview/file-preview.com
 import { NzCodeEditorModule } from 'ng-zorro-antd/code-editor';
 import { FormsModule } from '@angular/forms';
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
     NzDividerModule,
     NzPageHeaderModule,
     NzTagModule,
+    NzButtonModule,
     NzCodeEditorModule,
     MonacoEditorModule,
   ],

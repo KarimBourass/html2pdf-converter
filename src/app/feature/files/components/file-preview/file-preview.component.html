@@ -1,17 +1,20 @@
-<nz-page-header
-  (nzBack)="onBack()"
-  nzBackIcon
-  nzTitle="File"
-  [nzSubtitle]="file?.file_id"
-/>
-<div class="flex gap-x-4">
-  <ngx-monaco-editor
+<div class="flex justify-between items-center">
+  <nz-page-header
+    (nzBack)="onBack()"
+    nzBackIcon
+    nzTitle="File"
+    [nzSubtitle]="file?.file_id"
+  />
+  <button nz-button nzType="primary">Validate</button>
+</div>
+<div class="flex gap-x-4 max-w-3xl mx-auto">
+  <!-- <ngx-monaco-editor
     style="height: 80vh"
     class="flex-1 h-full"
     [options]="editorOptions"
     [(ngModel)]="code"
     (ngModelChange)="onCodeChanged()"
-  />
+  /> -->
   <span
     style="height: 80vh; overflow-y: auto"
     class="flex-1"

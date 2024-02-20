@@ -2,7 +2,7 @@
   (nzBack)="onBack()"
   nzBackIcon
   nzTitle="File"
-  nzSubtitle="file id"
+  [nzSubtitle]="file?.file_id"
 />
 <div class="flex gap-x-4">
   <ngx-monaco-editor

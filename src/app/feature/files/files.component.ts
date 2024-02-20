@@ -1,31 +1,17 @@
-import { Component } from "@angular/core";
+import { FileService } from './file.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-files",
-  templateUrl: "./files.component.html",
-  styleUrls: ["./files.component.scss"],
+  selector: 'app-files',
+  templateUrl: './files.component.html',
 })
-export class FilesComponent {
-  code = "const a = 1;";
+export class FilesComponent implements OnInit {
+  files: any[] = [];
+  constructor(private fileService: FileService) {}
 
-  listOfData: any[] = [
-    {
-      key: "1",
-      name: "John Brown",
-      age: 32,
-      file_id: "dsakbc7821HH",
-    },
-    {
-      key: "2",
-      name: "Jim Green",
-      age: 42,
-      file_id: "dsakbc7821HH",
-    },
-    {
-      key: "3",
-      name: "Joe Black",
-      age: 32,
-      file_id: "dsakbc7821HH",
-    },
-  ];
+  ngOnInit() {
+    this.fileService.getFiles().subscribe((res: any) => {
+      this.files = res;
+    });
+  }
 }
